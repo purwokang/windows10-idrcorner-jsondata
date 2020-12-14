@@ -40,7 +40,7 @@ class ListUser extends Component {
         const listuser = datauser.map(user => {
             return (
                 <div key={user.id} className='alert alert-primary'>
-                    <Link to={'/detailuser/' + user.id}>
+                    <Link to={'/detailuser/' + user.id} className='text-decoration-none'>
                         <h3>{user.name}</h3>
                     </Link>
                     <p>Email: {user.email}</p>

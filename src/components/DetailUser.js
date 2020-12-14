@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 class DetailUser extends Component {
 
@@ -39,6 +40,7 @@ class DetailUser extends Component {
                     <p>Phone: {user.phone}</p>
                     <p>Website: {user.website}</p>
                 </div>
+                <Link className='nav-link' exact to='/'>Kembali ke Daftar User</Link>
             </div>
         )
     }
