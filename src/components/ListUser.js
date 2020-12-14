@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 class ListUser extends Component {
 
@@ -39,13 +40,16 @@ class ListUser extends Component {
         const listuser = datauser.map(user => {
             return (
                 <div key={user.id} className='alert alert-primary'>
-                    <h3>{user.name}</h3>
+                    <Link to={'/detailuser/' + user.id}>
+                        <h3>{user.name}</h3>
+                    </Link>
                     <p>Email: {user.email}</p>
                 </div>
             )
         })
         return (
             <div>
+                <h1>DAFTAR USER</h1>
                 {listuser}
             </div>
         )

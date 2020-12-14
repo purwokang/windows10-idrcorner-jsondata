@@ -1,12 +1,16 @@
 import React from 'react';
 import ListUser from './ListUser';
+import DetailUser from './DetailUser'
+import { BrowserRouter, Route } from 'react-router-dom';
 
 const App = () => {
     return (
-        <div className='container'>
-            <h1>DAFTAR USER</h1>
-            <ListUser />
-        </div>
+        <BrowserRouter>
+            <div className='container'>
+                <Route exact path='/' component={ListUser} />
+                <Route path='/detailuser/:id_user' component={DetailUser} />
+            </div>
+        </BrowserRouter>
     )
 }
 
